@@ -1,6 +1,6 @@
 FROM amazon/aws-cli
 
-RUN yum install -y git ssh && yum clean all
+RUN yum install -y git ssh jq && yum clean all
 COPY . /scripts/
 ENTRYPOINT [ "bash", "-c" ]
 
